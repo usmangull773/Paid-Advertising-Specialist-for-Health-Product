@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Captify 30 Day Plan</title>
+<style>
+:root{--navy:#0b1f36;--card:#12355b;--blue:#0f4c81;--gold:#c8a24a;--lgold:#e3c77f;--bg:#e9eff6;--white:#fff;--red:#b3261e;--green:#1f6f43;--text:#1b2733;--muted:#55636f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:28px;line-height:1.25;margin-bottom:14px}
+h3{font-size:18px;line-height:1.35;margin-bottom:8px}
+p{margin-bottom:12px}
+.num{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--blue);margin-bottom:6px}
+.hl{background:rgba(200,162,74,.25);padding:0 4px;border-radius:3px;font-weight:600}
+.lead{font-size:17px;color:var(--muted);max-width:760px;margin-bottom:28px}
+/* hero */
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--gold);padding:28px 0 56px}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#b9c6d6;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:40px}
+.label{color:var(--lgold);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.hero h1{font-size:44px;line-height:1.1;margin:8px 0 16px}
+.hero .out{font-size:20px;max-width:760px;color:#dbe4ee}
+.hero .out b{color:var(--lgold)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin:22px 0 34px;font-size:14px;color:#b9c6d6}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpi{background:var(--card);border-radius:10px;padding:20px}
+.kpi .v{font-size:34px;font-weight:800;color:var(--lgold);line-height:1.1}
+.kpi .l{font-size:14px;color:#c9d5e3;margin-top:6px}
+/* findings */
+.findings{display:grid;gap:22px}
+.find{background:#fff;border-radius:10px;padding:26px;box-shadow:0 2px 10px rgba(11,31,54,.08);border-left:5px solid var(--blue)}
+.find.med{border-left-color:var(--gold)}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:20px;color:#fff;background:var(--blue);margin-bottom:10px}
+.tag.med{background:var(--gold);color:var(--navy)}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #dde5ee;vertical-align:top}
+thead th{background:var(--navy);color:#fff;font-weight:600}
+.cmp th.bad{background:var(--red)}
+.cmp th.good{background:var(--green)}
+.cmp td.bad{color:var(--red)}
+.cmp td.good{color:var(--green)}
+.tablewrap{overflow-x:auto}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center;margin-top:16px;text-align:center;font-size:14px}
+.flow .box{border:1px solid #cdd8e4;border-radius:8px;padding:12px;background:var(--bg)}
+.flow .box.end{background:var(--navy);color:#fff;border-color:var(--navy)}
+.flow .arr{color:var(--gold);font-weight:800;font-size:20px}
+/* plan */
+.white{background:#fff}
+.timeline{background:var(--navy);border-radius:12px;padding:24px;color:#fff;margin-bottom:28px}
+.trow{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:center;padding:8px 0;font-size:14px}
+.track{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:22px}
+.track span{background:rgba(255,255,255,.08);border-radius:3px}
+.track span.on{background:var(--gold)}
+.weeks{display:grid;grid-template-columns:200px 1fr;gap:12px;font-size:12px;color:#b9c6d6;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:6px}
+.weeks div:last-child{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;text-align:center}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:16px;background:var(--bg);border-radius:10px;padding:22px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step .why{font-size:14px;color:var(--muted);margin:0}
+.step ul{margin:6px 0 10px 18px;font-size:15px}
+/* results */
+.dark{background:var(--navy);color:#fff}
+.dark .num{color:var(--lgold)}
+.dark .lead{color:#c9d5e3}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--card);border-radius:10px;padding:22px}
+.rc .big{font-size:34px;font-weight:800;color:var(--lgold);line-height:1.1;margin:6px 0 4px}
+.rc .cap{font-size:14px;color:#c9d5e3;margin-bottom:16px}
+.bar{margin:8px 0}
+.bar .bl{display:flex;justify-content:space-between;font-size:13px;color:#c9d5e3;margin-bottom:4px}
+.bar .bt{height:12px;background:rgba(255,255,255,.08);border-radius:3px}
+.bar .bf{height:12px;border-radius:3px;background:#6d86a3}
+.bar .bf.g{background:var(--gold)}
+.rc .ctx{font-size:13px;color:#9fb1c5;margin-top:14px}
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nc{background:#fff;border-radius:10px;padding:24px;border-top:5px solid var(--gold);box-shadow:0 2px 10px rgba(11,31,54,.06)}
+.cta{background:var(--gold);color:var(--navy);padding:48px 0;text-align:center}
+.cta h2{margin-bottom:8px}
+.cta p{font-size:18px;margin:0}
+footer{background:var(--navy);color:#c9d5e3;padding:28px 0;text-align:center;font-size:14px}
+footer b{color:#fff}
+@media (max-width:760px){
+ section{padding:48px 0}
+ .hero h1{font-size:32px}
+ .kpis,.res,.next{grid-template-columns:1fr}
+ .trow,.weeks{grid-template-columns:1fr}
+ .weeks div:first-child{display:none}
+ .flow{grid-template-columns:1fr}
+ .flow .arr{transform:rotate(90deg)}
+ .step{grid-template-columns:1fr}
+ h2{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="topbar"><span>Paid advertising plan</span><span>October 2026</span></div>
+  <div class="label">30 day plan prepared for</div>
+  <h1>Captify</h1>
+  <p class="out">Turn Google and Meta spend into <b>tracked glasses sales from older adults and the families who buy for them</b>, with every dollar tied to a Shopify order.</p>
+  <div class="meta"><span>Channels: Google Search, Shopping, Meta</span><span>Market: United States</span><span>Products: Captify Pro, Captify Myvu</span></div>
+  <div class="kpis">
+   <div class="kpi"><div class="v">90</div><div class="l">customer reviews on site, 78% five star. Strong ad proof that is ready to use.</div></div>
+   <div class="kpi"><div class="v">2</div><div class="l">buyers per sale: the person with hearing loss and the family member who often pays.</div></div>
+   <div class="kpi"><div class="v">14 day</div><div class="l">risk free trial plus FSA, HSA and vision insurance support. These remove the biggest objection for older buyers.</div></div>
+  </div>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <span class="num">01</span>
+  <h2>What we found</h2>
+  <p class="lead">Captify sells a premium, high consideration product to an audience that researches slowly and often asks family before buying. The ads have to <span class="hl">reach two different buyers, earn trust before asking for the sale, and report revenue back to the ad platforms</span>.</p>
+
+  <div class="findings">
+   <div class="find">
+    <span class="tag">High impact</span>
+    <h3>One product, two buyers, two different messages</h3>
+    <p>Your reviews show the pattern clearly. Many buyers are wives, sons and cousins buying for someone with hearing loss. <b>One generic ad set cannot speak to both groups.</b> The user wants to be part of the conversation again. The family buyer wants to know it works, that it is easy to set up and that returns are simple.</p>
+    <div class="tablewrap">
+    <table class="cmp">
+     <thead><tr><th class="bad">One audience, one message</th><th class="good">Split by buyer</th></tr></thead>
+     <tbody>
+      <tr><td class="bad">A broad 55+ audience sees a feature led ad</td><td class="good">Users 60+ see "follow every word at dinner" with real captions on screen</td></tr>
+      <tr><td class="bad">Family buyers are missed or shown the same ad</td><td class="good">Adult children 35 to 60 see a gift and trial angle backed by family reviews</td></tr>
+      <tr><td class="bad">Instagram first placements</td><td class="good">Facebook Feed and Facebook Video first, where the 60+ audience spends its time</td></tr>
+      <tr><td class="bad">Video relies on sound</td><td class="good">Every video is captioned and works with sound off, which is your product's own promise</td></tr>
+     </tbody>
+    </table>
+    </div>
+   </div>
+
+   <div class="find">
+    <span class="tag">High impact</span>
+    <h3>Ad spend has to optimize toward purchases, not clicks</h3>
+    <p>With a premium price and a long research window, the ad platforms only learn who will buy if they receive the <b>purchase event with its order value</b> from Shopify. Without browser and server side signals, Meta and Google see too few sales to optimize properly.</p>
+    <div class="flow">
+     <div class="box">Shopify order<br>with value</div><div class="arr">&gt;</div>
+     <div class="box">GA4, Google enhanced conversions, Meta CAPI</div><div class="arr">&gt;</div>
+     <div class="box end">Bidding toward revenue and ROAS</div>
+    </div>
+   </div>
+
+   <div class="find med">
+    <span class="tag med">Medium impact</span>
+    <h3>High intent search demand is narrow, so each term needs its own landing message</h3>
+    <p>People search for captioning glasses from several angles. Each one needs its own ad group and its own landing promise.</p>
+    <div class="tablewrap">
+    <table>
+     <thead><tr><th>Search cluster</th><th>Example intent</th><th>Landing message</th></tr></thead>
+     <tbody>
+      <tr><td>Product category</td><td>captioning glasses, subtitle glasses</td><td>Captify Pro, dual microphones, everyday frames</td></tr>
+      <tr><td>Problem led</td><td>hard to hear in restaurants, hearing aids not enough</td><td>Use alongside hearing aids, read conversations as they happen</td></tr>
+      <tr><td>Gift and family</td><td>gifts for parents with hearing loss</td><td>14 day trial, free US shipping, setup support</td></tr>
+      <tr><td>Payment</td><td>FSA eligible hearing devices</td><td>FSA, HSA and vision insurance page</td></tr>
+      <tr><td>Brand</td><td>Captify glasses, Captify Pro review</td><td>Reviews and press, protects branded traffic</td></tr>
+     </tbody>
+    </table>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="white">
+ <div class="wrap">
+  <span class="num">02</span>
+  <h2>The 30 day plan</h2>
+  <p class="lead">Tracking comes first, then search demand, then Meta prospecting for both buyers. Retargeting and budget shifts come last, once the data is reliable.</p>
+
+  <div class="timeline">
+   <div class="weeks"><div></div><div><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div></div>
+   <div class="trow"><div>Tracking and audit</div><div class="track"><span class="on"></span><span></span><span></span><span></span></div></div>
+   <div class="trow"><div>Google Search and Shopping</div><div class="track"><span></span><span class="on"></span><span class="on"></span><span class="on"></span></div></div>
+   <div class="trow"><div>Meta, users and families</div><div class="track"><span></span><span></span><span class="on"></span><span class="on"></span></div></div>
+   <div class="trow"><div>Retargeting and trust</div><div class="track"><span></span><span></span><span></span><span class="on"></span></div></div>
+   <div class="trow"><div>Weekly reporting</div><div class="track"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div></div>
+  </div>
+
+  <div class="steps">
+   <div class="step"><div class="n">1</div><div>
+    <h3>Week 1: Audit and rebuild purchase tracking</h3>
+    <ul><li>Shopify purchases with order value into GA4, Google Ads enhanced conversions and Meta Conversions API, with deduplication</li><li>Secondary signals: add to cart, lens selection, insurance page views</li><li>Review current campaigns, search terms and audiences, and cut obvious waste</li></ul>
+    <p class="why">Reason: every later decision depends on the platforms seeing real sales and their value.</p>
+   </div></div>
+   <div class="step"><div class="n">2</div><div>
+    <h3>Week 2: Build Google Search and Shopping around intent</h3>
+    <ul><li>Search campaigns by cluster: category, problem, gift, payment and brand</li><li>Shopping feed for Pro and Myvu with clean titles, prices and review ratings</li><li>Exclude terms for cheap smart glasses and general AR glasses</li></ul>
+    <p class="why">Reason: people already searching for a solution are the cheapest sales to win.</p>
+   </div></div>
+   <div class="step"><div class="n">3</div><div>
+    <h3>Week 3: Launch Meta for two buyers</h3>
+    <ul><li>Prospecting for users 60+ and for family buyers 35 to 60, with separate creative</li><li>Captioned video built from real customer reviews and restaurant or family dinner moments</li><li>Facebook placements first, with larger text and simple calls to action</li></ul>
+    <p class="why">Reason: Meta creates demand from people who do not yet know captioning glasses exist.</p>
+   </div></div>
+   <div class="step"><div class="n">4</div><div>
+    <h3>Week 4: Retarget visitors with trust messages and move budget to winners</h3>
+    <ul><li>Retargeting in sequence: reviews, then the 14 day trial, then FSA, HSA and insurance</li><li>Shift budget toward the ad sets and keywords with the lowest cost per purchase</li><li>Set a target cost per purchase and ROAS for month two</li></ul>
+    <p class="why">Reason: older buyers rarely purchase on the first visit, so the follow up has to answer their doubts.</p>
+   </div></div>
+   <div class="step"><div class="n">5</div><div>
+    <h3>Every week: A plain English report</h3>
+    <ul><li>Spend, purchases, cost per purchase and ROAS by channel and audience</li><li>What changed, why it changed, and what happens next week</li></ul>
+    <p class="why">Reason: you see exactly where each dollar went and what it returned.</p>
+   </div></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <span class="num">03</span>
+  <h2>Comparable results</h2>
+  <p class="lead">Results from healthcare and eCommerce accounts where the work was the same: fix tracking, point bidding at real outcomes, then scale what converts.</p>
+  <div class="res">
+   <div class="rc">
+    <div class="label">Cosmetic surgery clinic, USD</div>
+    <div class="big">+140%</div>
+    <div class="cap">confirmed bookings, after rebuilding conversion tracking so bidding optimized toward real bookings</div>
+    <div class="bar"><div class="bl"><span>Before</span><span>5</span></div><div class="bt"><div class="bf" style="width:42%"></div></div></div>
+    <div class="bar"><div class="bl"><span>After</span><span>12</span></div><div class="bt"><div class="bf g" style="width:100%"></div></div></div>
+    <p class="ctx">Level ad spend</p>
+   </div>
+   <div class="rc">
+    <div class="label">Same clinic, cost per conversion</div>
+    <div class="big">$46.15</div>
+    <div class="cap">down from $99.97, a 53.8% reduction</div>
+    <div class="bar"><div class="bl"><span>Before</span><span>$99.97</span></div><div class="bt"><div class="bf" style="width:100%"></div></div></div>
+    <div class="bar"><div class="bl"><span>After</span><span>$46.15</span></div><div class="bt"><div class="bf g" style="width:46%"></div></div></div>
+    <p class="ctx">Conversion rate rose from 1.50% to 6.54%</p>
+   </div>
+   <div class="rc">
+    <div class="label">Return on ad spend</div>
+    <div class="big">7.42x ROAS</div>
+    <div class="cap">on a single high ticket treatment ad group, $18,973.20 conversion value</div>
+    <div class="bar"><div class="bl"><span>Peak ROAS, medical aesthetics</span><span>9.2x</span></div><div class="bt"><div class="bf g" style="width:100%"></div></div></div>
+    <div class="bar"><div class="bl"><span>Breast augmentation ad group</span><span>7.42x</span></div><div class="bt"><div class="bf g" style="width:81%"></div></div></div>
+    <p class="ctx">$15.5M ad spend managed across 977 campaigns in eCommerce</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="num">04</span>
+  <h2>What happens next</h2>
+  <div class="next">
+   <div class="nc"><h3>1. A short call</h3><p>15 minutes on your current spend, margins, target cost per sale and which product to push first, Pro or Myvu.</p></div>
+   <div class="nc"><h3>2. Account access</h3><p>Google Ads, Meta Business Manager, GA4 and Shopify with view or staff access. Nothing is changed before you approve the audit.</p></div>
+   <div class="nc"><h3>3. First week</h3><p>Tracking audit and fix list in your hands within 5 working days, with the campaign build plan for weeks 2 to 4.</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="cta">
+ <div class="wrap">
+  <h2>Let's have a quick call</h2>
+  <p>Reply to my message with a time that suits you.</p>
+ </div>
+</div>
+
+<footer><b>Usman Gull</b>, Google Ads and SEO Specialist</footer>
+
+</body>
+</html>
